@@ -5,7 +5,7 @@ import User from './users.js'
 import cors from 'cors'
 
 const app = express()
-const PORT = 3000
+const PORT = process.env.PORT || 3000
 
 dotenv.config()
 app.use(express.json())
