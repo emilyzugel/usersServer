@@ -9,7 +9,13 @@ const PORT = process.env.PORT || 3000
 
 dotenv.config()
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+  origin: [
+    'http://localhost:5173',  // dev
+    'https://users-server-h4zbz0qga-emilyzugels-projects.vercel.app'  // produção
+  ],
+  credentials: true
+}))
 
 // Connect to MongoDB
 const connectDB = async () => {
