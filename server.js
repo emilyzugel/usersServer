@@ -11,8 +11,8 @@ dotenv.config()
 app.use(express.json())
 app.use(cors({
   origin: [
-    'http://localhost:5173',  // dev
-    'https://users-server-h4zbz0qga-emilyzugels-projects.vercel.app'  // produção
+    'http://localhost:5173',
+    'https://signin-page-one.vercel.app'
   ],
   credentials: true
 }))
